@@ -17,7 +17,7 @@ def translate_text(source, target, input_):
 
   response = requests.request("GET", url, params=querystring)
   print(type(response))
-  data1 = response.json() #converts response to dictionary data type
+  data1 = response.json() #converts response to dictionary data type (deserialize)
   print(type(data1))
   print(data1["data"]["translations"][0]["translatedText"])
 
